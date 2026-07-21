@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abhishek Patel | Full Stack Developer
 
-## Getting Started
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
+![Framework](https://img.shields.io/badge/Framework-Next.js%2014-black?logo=next.js)
+![Animation](https://img.shields.io/badge/Animations-GSAP%20%2B%20WebGL-green)
+
+A premium, highly-animated personal portfolio built with Next.js, featuring smooth scrolling, GSAP scroll triggers, and a custom interactive WebGL 3D Topographic background. 
+
+## ✨ Features
+
+- **Custom WebGL Shaders**: A custom-built 3D Simplex noise shader that morphs dynamically on the canvas, reacting to scroll position to shift from dark mode to light mode.
+- **GSAP ScrollTrigger**: Complex timeline animations including pinned horizontal scrolling, staggered reveals, and parallax overlays.
+- **Bento Box Grid**: A fully responsive, asymmetrical masonry-style CSS grid for displaying skills and expertise.
+- **Lenis Smooth Scroll**: Buttery smooth momentum scrolling for an elevated, app-like feel.
+- **Next.js App Router**: Lightning fast, static HTML export configured for zero-cost hosting.
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Custom CSS Modules + Variables
+- **Animations:** GSAP (GreenSock)
+- **Graphics:** WebGL / HTML5 Canvas
+- **Deployment:** GitHub Pages / Vercel
+
+## ⚙️ Local Development
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🌐 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for seamless deployment to **GitHub Pages** via GitHub Actions.
+To deploy, simply push to the `main` branch. The `.github/workflows/deploy.yml` will automatically build the static export and deploy it.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Designed & Developed by Abhishek Patel*
