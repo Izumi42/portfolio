@@ -8,6 +8,12 @@
   mix-blend-mode: difference;
 }
 
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding: 1rem;
+  }
+}
+
 .navInner {
   display: flex;
   justify-content: space-between;
