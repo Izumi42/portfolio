@@ -44,7 +44,7 @@
 }
 
 .hugeText h2 {
-  font-size: 15vw;
+  font-size: clamp(4rem, 15vw, 12rem);
   line-height: 0.8;
   text-transform: uppercase;
   letter-spacing: -0.05em;
