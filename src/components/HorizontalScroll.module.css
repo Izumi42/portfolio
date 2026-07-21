@@ -49,14 +49,6 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 767px) {
-  .itemWrapper {
-    width: 85vw;
-    min-width: unset;
-    height: 50vh;
-  }
-}
-
 .itemInner {
   display: flex;
   flex-direction: column;

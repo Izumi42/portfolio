@@ -6,7 +6,7 @@
   padding: 2rem;
   padding-top: calc(2rem + env(safe-area-inset-top, 0px));
   z-index: 100;
-  mix-blend-mode: difference;
+  pointer-events: none; /* Let clicks pass through empty areas */
 }
 
 @media screen and (max-width: 767px) {
@@ -14,6 +14,15 @@
     padding: 1rem;
     padding-top: calc(1rem + env(safe-area-inset-top, 0px));
   }
+}
+
+.navInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  pointer-events: auto; /* Re-enable clicks for children */
 }
 
 .navInner {
@@ -31,6 +40,7 @@
   color: var(--color-lime);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  mix-blend-mode: difference;
 }
 
 .menuToggle {
@@ -44,6 +54,7 @@
   border: 1px solid var(--color-lime);
   border-radius: 20px;
   transition: all 0.3s ease;
+  mix-blend-mode: difference;
 }
 
 .menuToggle:hover {
