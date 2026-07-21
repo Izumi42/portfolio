@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   padding: 2rem;
+  padding-top: calc(2rem + env(safe-area-inset-top, 0px));
   z-index: 100;
   mix-blend-mode: difference;
 }
@@ -11,6 +12,7 @@
 @media screen and (max-width: 767px) {
   .navbar {
     padding: 1rem;
+    padding-top: calc(1rem + env(safe-area-inset-top, 0px));
   }
 }
 
