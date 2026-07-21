@@ -38,6 +38,7 @@
   width: max-content;
   padding: 0 5vw;
   align-items: center;
+  will-change: transform;
 }
 
 .itemWrapper {
@@ -73,22 +74,4 @@
   justify-content: center;
   font-family: var(--font-playfair);
   font-size: 5rem;
-}
-
-@media (max-width: 768px) {
-  .itemWrapper {
-    width: 75vw;
-    min-width: 300px;
-    height: 50vh;
-    margin-right: 8vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .itemWrapper {
-    width: 85vw;
-    min-width: unset;
-    height: 45vh;
-    margin-right: 10vw;
-  }
 }

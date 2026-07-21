@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
+import { useRef, useEffect, forwardRef, useImperativeHandle, memo } from 'react';
 import styles from './TopographicBackground.module.css';
 
 const vertexShaderSource = `
@@ -195,12 +195,14 @@ const TopographicBackground = forwardRef((props, ref) => {
 
     let animationFrameId;
     let startTime = Date.now();
+    let isVisible = true;
 
     const resize = () => {
       // Match the physical pixel size of the canvas element
       const parent = canvas.parentElement;
       if (!parent) return;
-      const dpr = window.devicePixelRatio || 1;
+      // Cap DPR to 1.5 to save massive GPU load on Retina/4K screens
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       const width = parent.clientWidth;
       const height = parent.clientHeight;
       
@@ -217,23 +219,33 @@ const TopographicBackground = forwardRef((props, ref) => {
     resize(); // Initial sizing
 
     const render = () => {
+      if (!isVisible) return; // Pause rendering if off-screen
+
       const time = (Date.now() - startTime) / 1000;
       gl.uniform1f(timeLocation, time);
       gl.uniform1f(scrollLocation, scrollProgressRef.current);
       
-      // Clear with transparent (though we now draw full background in shader)
       gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);
-      
       gl.drawArrays(gl.TRIANGLES, 0, 6);
       
       animationFrameId = requestAnimationFrame(render);
     };
 
-    render();
+    // Intersection Observer to pause animation when off-screen
+    const observer = new IntersectionObserver((entries) => {
+      isVisible = entries[0].isIntersecting;
+      if (isVisible) {
+        // Resume rendering
+        cancelAnimationFrame(animationFrameId);
+        render();
+      }
+    });
+    observer.observe(canvas);
 
     return () => {
       window.removeEventListener('resize', resize);
+      observer.disconnect();
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -245,4 +257,4 @@ const TopographicBackground = forwardRef((props, ref) => {
   );
 });
 
-export default TopographicBackground;
+export default memo(TopographicBackground);

@@ -9,22 +9,22 @@ import InteractiveGrid from '@/components/InteractiveGrid';
 import Footer from '@/components/Footer';
 import FluidBackground from '@/components/FluidBackground';
 
+const horizontalItems = [
+  { id: '01', title: 'SaaS Platform' },
+  { id: '02', title: 'Fintech Dashboard' },
+  { id: '03', title: 'E-commerce API' },
+  { id: '04', title: 'Real-time Chat App' },
+];
+
+const gridItems = [
+  { name: 'Frontend', year: 'React, Next.js, Vue' },
+  { name: 'Backend', year: 'Node.js, Python, Go' },
+  { name: 'Database', year: 'PostgreSQL, MongoDB' },
+  { name: 'DevOps', year: 'Docker, AWS, CI/CD' },
+];
+
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
-
-  const horizontalItems = [
-    { id: '01', title: 'SaaS Platform' },
-    { id: '02', title: 'Fintech Dashboard' },
-    { id: '03', title: 'E-commerce API' },
-    { id: '04', title: 'Real-time Chat App' },
-  ];
-
-  const gridItems = [
-    { name: 'Frontend', year: 'React, Next.js, Vue' },
-    { name: 'Backend', year: 'Node.js, Python, Go' },
-    { name: 'Database', year: 'PostgreSQL, MongoDB' },
-    { name: 'DevOps', year: 'Docker, AWS, CI/CD' },
-  ];
 
   return (
     <main>
