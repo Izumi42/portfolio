@@ -58,3 +58,21 @@
   font-size: 0.9rem;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--section-padding) 1rem 1rem 1rem;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .top {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hugeText h2 {
+    font-size: 22vw;
+  }
+}
