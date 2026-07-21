@@ -15,7 +15,7 @@
 }
 
 .loadingText {
-  font-size: 15vw;
+  font-size: clamp(4rem, 15vw, 12rem);
   font-weight: 700;
   letter-spacing: -0.05em;
   position: relative;

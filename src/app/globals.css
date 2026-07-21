@@ -34,21 +34,21 @@
 @media screen and (max-width: 991px) {
   :root {
     --design-width: 991;
-    --design-unit: 18;
+    --design-unit: 16;
   }
 }
 
 @media screen and (max-width: 767px) {
   :root {
     --design-width: 767;
-    --design-unit: 20;
+    --design-unit: 14;
   }
 }
 
 @media screen and (max-width: 479px) {
   :root {
     --design-width: 479;
-    --design-unit: 22;
+    --design-unit: 12;
   }
 }
 
@@ -104,14 +104,14 @@ button {
 
 /* Typography Classes */
 .text-impact {
-  font-size: 8rem;
+  font-size: clamp(4rem, 15vw, 8rem);
   line-height: 0.85;
   letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
 .text-impact-sm {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 10vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;

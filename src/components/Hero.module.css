@@ -21,7 +21,7 @@
 }
 
 .title {
-  font-size: 10vw;
+  font-size: clamp(3rem, 12vw, 10rem);
   line-height: 0.85;
   text-transform: uppercase;
   letter-spacing: -0.05em;
