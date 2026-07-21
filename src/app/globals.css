@@ -57,6 +57,7 @@ html {
   scroll-behavior: initial;
   background-color: var(--color-bg-dark);
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -67,8 +68,9 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100dvh;
+  min-height: 100vh;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 * {
@@ -105,14 +107,14 @@ button {
 
 /* Typography Classes */
 .text-impact {
-  font-size: 8rem;
+  font-size: clamp(4rem, 12vw, 8rem);
   line-height: 0.85;
   letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
 .text-impact-sm {
-  font-size: 5rem;
+  font-size: clamp(3rem, 10vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;
