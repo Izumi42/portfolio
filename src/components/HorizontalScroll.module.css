@@ -1,6 +1,6 @@
 .horizontalSection {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   overflow: hidden;
   background-color: transparent;
@@ -34,7 +34,7 @@
 
 .track {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   width: max-content;
   padding: 0 5vw;
   align-items: center;
@@ -74,4 +74,16 @@
   justify-content: center;
   font-family: var(--font-playfair);
   font-size: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .itemWrapper {
+    width: 85vw;
+    min-width: 0;
+    height: 50vh;
+  }
+  
+  .placeholderImage {
+    font-size: 3rem;
+  }
 }
