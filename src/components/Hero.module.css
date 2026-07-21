@@ -84,7 +84,7 @@
   }
   
   .title {
-    font-size: 15vw;
+    font-size: 13vw;
     line-height: 0.9;
   }
   
@@ -95,7 +95,7 @@
 
 @media (max-width: 480px) {
   .title {
-    font-size: 18vw;
+    font-size: 13vw;
     margin-bottom: 1.5rem;
   }
   
