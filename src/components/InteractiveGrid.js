@@ -12,29 +12,35 @@ export default function InteractiveGrid({ items }) {
     
     let ctx = gsap.context(() => {
       // Animate the header
-      gsap.from('.grid-header-anim', {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
+      gsap.fromTo('.grid-header-anim', 
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          }
         }
-      });
+      );
 
       // Stagger fade-in for grid items
-      gsap.from('.grid-item-anim', {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.grid-container-anim',
-          start: "top 75%",
+      gsap.fromTo('.grid-item-anim', 
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.grid-container-anim',
+            start: "top 75%",
+          }
         }
-      });
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -43,7 +49,7 @@ export default function InteractiveGrid({ items }) {
   return (
     <section ref={sectionRef} className={styles.gridSection}>
       <div className="container">
-        <div className={`${styles.header} grid-header-anim`}>
+        <div className={`${styles.header} grid-header-anim`} style={{ opacity: 0, transform: 'translateY(50px)' }}>
           <h2 className="text-impact-sm">
             Skills &<br/>
             <span style={{ color: 'var(--color-lime-off)' }}>Expertise</span>
@@ -52,7 +58,7 @@ export default function InteractiveGrid({ items }) {
         
         <div className={`${styles.grid} grid-container-anim`}>
           {items.map((item, index) => (
-            <div key={index} className={`${styles.gridItem} grid-item-anim`}>
+            <div key={index} className={`${styles.gridItem} grid-item-anim`} style={{ opacity: 0, transform: 'translateY(100px)' }}>
               <div className={styles.imageWrapper}>
                 <div className={styles.baseImage}>
                   <div className={styles.placeholderBase}>{index + 1}</div>
