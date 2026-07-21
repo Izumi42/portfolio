@@ -50,6 +50,7 @@
   :root {
     --design-width: 479;
     --design-unit: 22;
+    --section-padding: calc(2rem + var(--gap));
   }
 }
 

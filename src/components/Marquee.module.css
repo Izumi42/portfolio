@@ -39,3 +39,25 @@
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 768px) {
+  .marqueeContent span {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .separator {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .marqueeContent span {
+    font-size: 1.5rem;
+    padding: 0 0.75rem;
+  }
+  
+  .separator {
+    font-size: 1rem !important;
+  }
+}
