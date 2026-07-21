@@ -3,11 +3,13 @@ import { useState } from 'react';
 import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Marquee from '@/components/Marquee';
-import HorizontalScroll from '@/components/HorizontalScroll';
-import InteractiveGrid from '@/components/InteractiveGrid';
-import Footer from '@/components/Footer';
-import FluidBackground from '@/components/FluidBackground';
+import dynamic from 'next/dynamic';
+
+const Marquee = dynamic(() => import('@/components/Marquee'), { ssr: true });
+const HorizontalScroll = dynamic(() => import('@/components/HorizontalScroll'), { ssr: false });
+const InteractiveGrid = dynamic(() => import('@/components/InteractiveGrid'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: true });
+const FluidBackground = dynamic(() => import('@/components/FluidBackground'), { ssr: true });
 
 const horizontalItems = [
   { id: '01', title: 'SaaS Platform' },
