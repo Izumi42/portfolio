@@ -1,5 +1,7 @@
 # Abhishek Patel | Full Stack Developer
 
+**Live URL:** [https://izumi42.github.io/portfolio/](https://izumi42.github.io/portfolio/)
+
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
 ![Framework](https://img.shields.io/badge/Framework-Next.js%2014-black?logo=next.js)
 ![Animation](https://img.shields.io/badge/Animations-GSAP%20%2B%20WebGL-green)
